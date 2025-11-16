@@ -14,7 +14,7 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-secondary/30">
+    <section id="about" className="section-padding bg-background">
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
@@ -39,7 +39,7 @@ const About = () => {
             </p>
           </div>
 
-          <Card className="p-8 shadow-lg border-0 bg-card">
+          <Card className="p-8 modern-shadow border-0 bg-gradient-to-br from-cream/50 to-primary-light/20">
             <h3 className="text-2xl font-bold text-foreground mb-6">Core Expertise</h3>
             <div className="space-y-4">
               {skills.map((skill, index) => (
