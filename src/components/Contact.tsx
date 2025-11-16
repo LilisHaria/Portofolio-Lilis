@@ -12,20 +12,20 @@ const Contact = () => {
     {
       icon: Phone,
       label: "Phone",
-      value: "+62 XXX XXXX XXXX",
-      link: "tel:+62XXXXXXXXXX"
+      value: "+62 82160120912",
+      link: "https://wa.me/6282160120912"
     },
     {
       icon: Mail,
       label: "Email",
-      value: "lilis.haria@example.com",
-      link: "mailto:lilis.haria@example.com"
+      value: "harialilispharia@gmail.com",
+      link: "mailto:harialilispharia@gmail.com"
     },
     {
       icon: Linkedin,
       label: "LinkedIn",
-      value: "linkedin.com/in/lilis-haria",
-      link: "https://linkedin.com/in/lilis-haria"
+      value: "Lilis Puspita Haria",
+      link: "http://www.linkedin.com/in/lilis-puspita-haria"
     }
   ];
 
