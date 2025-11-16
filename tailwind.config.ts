@@ -25,6 +25,10 @@ export default {
           dark: "hsl(var(--primary-dark))",
           light: "hsl(var(--primary-light))",
         },
+        cream: {
+          DEFAULT: "hsl(var(--cream))",
+          dark: "hsl(var(--cream-dark))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",

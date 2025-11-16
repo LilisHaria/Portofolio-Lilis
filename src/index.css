@@ -9,40 +9,44 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 221 39% 11%;
+    --foreground: 220 40% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 221 39% 11%;
+    --card-foreground: 220 40% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 221 39% 11%;
+    --popover-foreground: 220 40% 15%;
 
-    --primary: 221 83% 53%;
+    --primary: 220 90% 35%;
     --primary-foreground: 0 0% 100%;
     
-    --primary-dark: 221 83% 38%;
-    --primary-light: 213 97% 87%;
+    --primary-dark: 220 100% 25%;
+    --primary-light: 200 100% 85%;
+    
+    --cream: 40 40% 92%;
+    --cream-dark: 40 30% 85%;
 
-    --secondary: 220 14% 96%;
-    --secondary-foreground: 221 39% 11%;
+    --secondary: 40 40% 92%;
+    --secondary-foreground: 220 40% 15%;
 
-    --muted: 220 14% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 40 40% 92%;
+    --muted-foreground: 220 15% 45%;
 
-    --accent: 213 97% 87%;
-    --accent-foreground: 221 39% 11%;
+    --accent: 200 100% 85%;
+    --accent-foreground: 220 90% 35%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 220 13% 91%;
-    --input: 220 13% 91%;
-    --ring: 221 83% 53%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 220 90% 35%;
 
-    --radius: 0.75rem;
+    --radius: 1rem;
     
-    --hero-gradient-from: 221 83% 38%;
-    --hero-gradient-to: 221 83% 53%;
+    --hero-gradient-from: 220 100% 25%;
+    --hero-gradient-via: 220 90% 35%;
+    --hero-gradient-to: 200 100% 85%;
     
     --shadow-soft: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
     --shadow-medium: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -50,39 +54,43 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 221 39% 11%;
-    --foreground: 0 0% 100%;
+    --background: 220 40% 10%;
+    --foreground: 0 0% 98%;
 
-    --card: 224 71% 4%;
-    --card-foreground: 0 0% 100%;
+    --card: 220 40% 12%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 224 71% 4%;
-    --popover-foreground: 0 0% 100%;
+    --popover: 220 40% 12%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 221 83% 53%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 200 100% 70%;
+    --primary-foreground: 220 100% 10%;
     
-    --primary-dark: 221 83% 38%;
-    --primary-light: 213 97% 87%;
+    --primary-dark: 220 90% 35%;
+    --primary-light: 200 100% 85%;
+    
+    --cream: 40 20% 20%;
+    --cream-dark: 40 15% 15%;
 
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 0 0% 100%;
+    --secondary: 40 20% 20%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 220 30% 20%;
+    --muted-foreground: 220 15% 65%;
 
-    --accent: 217 33% 17%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 220 30% 25%;
+    --accent-foreground: 200 100% 85%;
 
     --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 221 83% 53%;
+    --border: 220 30% 22%;
+    --input: 220 30% 22%;
+    --ring: 200 100% 70%;
     
-    --hero-gradient-from: 221 83% 38%;
-    --hero-gradient-to: 221 83% 53%;
+    --hero-gradient-from: 220 100% 25%;
+    --hero-gradient-via: 220 90% 35%;
+    --hero-gradient-to: 200 100% 40%;
   }
 }
 
@@ -103,7 +111,11 @@ All colors MUST be HSL.
 
 @layer components {
   .hero-gradient {
-    background: linear-gradient(135deg, hsl(var(--hero-gradient-from)) 0%, hsl(var(--hero-gradient-to)) 100%);
+    background: linear-gradient(135deg, hsl(var(--hero-gradient-from)) 0%, hsl(var(--hero-gradient-via)) 50%, hsl(var(--hero-gradient-to)) 100%);
+  }
+  
+  .cream-gradient {
+    background: linear-gradient(135deg, hsl(var(--cream)) 0%, hsl(var(--background)) 100%);
   }
   
   .card-hover {
@@ -111,10 +123,14 @@ All colors MUST be HSL.
   }
   
   .card-hover:hover {
-    @apply -translate-y-2 shadow-lg;
+    @apply -translate-y-2 shadow-xl;
   }
   
   .section-padding {
     @apply py-20 px-4 md:px-8;
+  }
+  
+  .modern-shadow {
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.15);
   }
 }

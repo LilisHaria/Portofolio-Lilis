@@ -30,7 +30,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-secondary/30">
+    <section id="contact" className="section-padding cream-gradient">
       <div className="container mx-auto max-w-4xl">
         <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl md:text-5xl font-bold text-foreground mb-4">
@@ -46,7 +46,7 @@ const Contact = () => {
           {contactInfo.map((item, index) => (
             <Card 
               key={index} 
-              className="p-6 shadow-lg border-0 card-hover cursor-pointer"
+              className="p-6 modern-shadow border-0 card-hover cursor-pointer bg-card hover:bg-primary-light/20 transition-all duration-300"
               onClick={() => item.link && window.open(item.link, '_blank')}
             >
               <div className="flex items-start gap-4">
